@@ -16,7 +16,7 @@ sudo apt-get install build-essential gcc-multilib dkms
 ```
 
 3. 禁用nouveau驱动：
-编辑 /etc/modprobe.d/blacklist-nouveau.conf 文件，添加以下内容：
+`sudo vim /etc/modprobe.d/blacklist-nouveau.conf`，添加以下内容：
 ```bash
 blacklist nouveau
 blacklist lbm-nouveau
