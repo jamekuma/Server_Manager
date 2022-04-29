@@ -17,3 +17,17 @@ sudo usermod -d <new-folder> -m <username>
 ```bash
 sudo usermod -d /data1/sigs -m sigs
 ```
+
+# 分发秘钥
+首先生成秘钥：
+```bash
+ssh-keygen -t rsa
+```
+使用如下的bash脚本分发秘钥：
+```bash
+ip_list=("ip1" "ip2")
+for ip in ${ip_list[*]}
+do
+    ssh-copy-id -i ./id_rsa.pub username@${ip}
+done
+```
