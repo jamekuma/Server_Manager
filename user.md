@@ -18,6 +18,17 @@ sudo usermod -d <new-folder> -m <username>
 sudo usermod -d /data1/sigs -m sigs
 ```
 
+更改文件/文件夹所属用户&用户组：
+```bash
+chown [-R] 用户名称 文件或目录
+chgrp [-R] 用户组名称 dirname/filename ...
+```
+例：
+```bash
+sudo chown -R xiongjianyu .
+sudo chgrp -R xiongjianyu .
+```
+
 # 分发秘钥
 首先生成秘钥：
 ```bash
