@@ -54,7 +54,7 @@ sudo systemctl stop kdm
 7. 安装nvidia驱动
 ```bash
 sudo chmod NVIDIA*.run
-sudo ./NVIDIA-Linux-x86_64-384.59.run –no-x-check -no-nouveau-check -no-opengl-files
+sudo ./NVIDIA-Linux-x86_64-384.59.run -no-x-check -no-nouveau-check -no-opengl-files
 ```
 
 –no-opengl-files：表示只安装驱动文件，不安装OpenGL文件。这个参数不可省略，否则会导致登陆界面死循环，英语一般称为”login loop”或者”stuck in login”。
