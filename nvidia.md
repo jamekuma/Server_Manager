@@ -45,7 +45,8 @@ sudo apt-get install linux-headers-$(uname -r)
 
 6. 关掉x graphic 服务
 ```bash
-sudo systemctl stop lightdm(or sudo service lightdm stop)
+sudo systemctl stop lightdm
+sudo service lightdm stop
 sudo systemctl stop gdm
 sudo systemctl stop kdm
 ```
