@@ -88,3 +88,20 @@ sudo modprobe nvidia
 nvidia-smi
 nvidia-settings #若弹出设置对话框，亦表示驱动安装成功
 ```
+
+# cuda版本控制
+可以通过`ls /usr/local`命令查看，当前服务器安装了哪些版本的cuda，以某服务器为例：
+```bash
+super@amax:~$ ls /usr/local
+bin   cuda-10.0  cuda-11.1  etc    include  libpng  sbin   src               VideoFX
+cuda  cuda-11    cuda-9.0   games  lib      man     share  TensorRT-7.2.2.3
+```
+表明该服务器安装了cuda 10.0/11.0/11.1/9.0
+
+可以通过修改用户自身的~/.bashrc文件，加入以下内容，改变当前用户使用的cuda版本（以cuda 11.1为例）：
+```bash
+export PATH=/usr/local/cuda-11.1/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-11.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export CUDA_HOME=/usr/local/cuda-11.1
+```
+
