@@ -1,7 +1,7 @@
 创建用户&赋予权限:
 ```bash
 username=
-sudo useradd -m -s /bin/bash -d /data/${username} {username}
+sudo useradd -m -s /bin/bash -d /data/${username} ${username}
 sudo passwd ${username}
 ```
 
