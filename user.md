@@ -1,6 +1,6 @@
 创建用户&赋予权限:
 ```bash
-username = 
+username=
 sudo useradd -m -s /bin/bash -d /data/${username} {username}
 sudo passwd ${username}
 ```
@@ -12,7 +12,7 @@ chgrp [-R] 用户组名称 dirname/filename ...
 ```
 例：
 ```bash
-username = 
+username=
 sudo chown -R ${username} /data/${username}
 sudo chgrp -R ${username} /data/${username}
 ```
