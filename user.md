@@ -19,7 +19,7 @@ sudo chgrp -R ${username} /data/${username}
 
 给予sudo权限:
 ```bash
-sudo usermod -aG sudo <username>
+sudo usermod -aG sudo ${username}
 ```
 
 迁移用户主目录:
