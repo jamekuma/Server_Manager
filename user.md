@@ -22,6 +22,11 @@ sudo chgrp -R ${username} /data/${username}
 sudo usermod -aG sudo ${username}
 ```
 
+列出sudo成员：
+```bash
+getent group sudo
+```
+
 迁移用户主目录:
 ```bash
 sudo usermod -d <new-folder> -m <username>
