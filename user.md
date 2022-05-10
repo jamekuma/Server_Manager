@@ -22,6 +22,11 @@ sudo chgrp -R ${username} /data/${username}
 sudo usermod -aG sudo ${username}
 ```
 
+撤销sudo权限:
+```bash
+sudo gpasswd -d ${username} sudo
+```
+
 列出sudo成员：
 ```bash
 getent group sudo
