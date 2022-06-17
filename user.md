@@ -1,3 +1,4 @@
+# 用户管理
 创建用户&赋予权限:
 ```bash
 username=
@@ -55,4 +56,15 @@ for ip in ${ip_list[*]}
 do
     ssh-copy-id -i ./id_rsa.pub username@${ip}
 done
+```
+
+# conda环境
+导出环境到yaml配置文件：
+```bash
+conda env export > environment.yaml
+```
+
+根据配置文件导入环境操作：
+```bash
+conda env create -f environment.yaml
 ```
