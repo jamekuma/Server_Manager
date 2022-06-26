@@ -68,3 +68,24 @@ conda env export > environment.yaml
 ```bash
 conda env create -f environment.yaml
 ```
+
+# 硬盘挂载
+查看所有硬盘（包括未挂载的硬盘）：
+```bash
+sudo fdisk -l
+```
+挂载某个硬盘（以/dev/sdb1挂载到/data目录为例）：
+```bash
+sudo mount /dev/sdb1 /data
+```
+其中`/data`目录需要自己提前创建。
+
+但是上述的挂载方法重启后失效。所以需要将分区信息写到/etc/fstab文件中让它永久挂载:··
+```bash
+sudo vim /etc/fstab
+```
+加入如下表项：
+```bash
+/dev/sdb1 /data ext4 defaults 0 0
+```
+
