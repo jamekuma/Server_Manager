@@ -89,3 +89,16 @@ sudo vim /etc/fstab
 /dev/sdb1 /data ext4 defaults 0 0
 ```
 
+# tmux配置
+在 .tmux.conf 中加入下列设置（tmux 2.1 之前的版本）：
+```bash
+set -g mode-mouse on
+set -g mouse-resize-pane on
+set -g mouse-select-pane on
+set -g mouse-select-window on
+```
+
+在 tmux 2.1 中，对鼠标模式进行了重写，因此新版只需要增加一段设置即可：
+```bash
+set -g mouse on
+```
