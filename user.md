@@ -102,3 +102,14 @@ set -g mouse-select-window on
 ```bash
 set -g mouse on
 ```
+
+# gcc/g++版本
+以换成4.8为例
+```bash
+sudo rm /usr/bin/gcc
+sudo rm /usr/bin/g++
+
+sudo ln -s /usr/bin/gcc-4.8 /usr/bin/gcc
+sudo ln -s /usr/bin/g++-4.8 /usr/bin/g++
+```
+
