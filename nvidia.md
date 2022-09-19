@@ -89,6 +89,11 @@ sudo modprobe nvidia
 nvidia-smi
 nvidia-settings #若弹出设置对话框，亦表示驱动安装成功
 ```
+# nvidia-smi执行很慢/任务预热太慢
+执行如下指令：
+```bash
+sudo nvidia-persistenced --persistence-mode
+```
 
 # cuda版本控制
 可以通过`ls /usr/local`命令查看，当前服务器安装了哪些版本的cuda，以某服务器为例：
