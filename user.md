@@ -89,6 +89,11 @@ sudo vim /etc/fstab
 /dev/sdb1 /data ext4 defaults 0 0
 ```
 
+如果是新硬盘，若上述挂载失败，则需格式化（**一定要注意不能有数据！否则会清空！**）：
+```bash
+sudo mkfs.ext4 /dev/sdb1
+```
+
 # tmux配置
 在 .tmux.conf 中加入下列设置（tmux 2.1 之前的版本）：
 ```bash
