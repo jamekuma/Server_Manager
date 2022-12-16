@@ -82,7 +82,7 @@ sudo mount /dev/sdb1 /data
 
 但是上述的挂载方法重启后失效。所以需要将分区信息写到/etc/fstab文件中让它永久挂载:··
 ```bash
-sudo vim /etc/fstab
+sudo nano /etc/fstab
 ```
 加入如下表项：
 ```bash
