@@ -54,8 +54,7 @@ sudo systemctl stop kdm
 
 7. 安装nvidia驱动
 ```bash
-sudo chmod NVIDIA*.run
-sudo ./NVIDIA-Linux-x86_64-384.59.run -no-x-check -no-nouveau-check -no-opengl-files
+sudo bash ${setup_file} -no-x-check -no-nouveau-check -no-opengl-files
 ```
 
 –no-opengl-files：表示只安装驱动文件，不安装OpenGL文件。这个参数不可省略，否则会导致登陆界面死循环，英语一般称为”login loop”或者”stuck in login”。
@@ -77,7 +76,7 @@ sudo ./NVIDIA-Linux-x86_64-384.59.run -no-x-check -no-nouveau-check -no-opengl-f
 选择`No`继续。
 
 `Would you like to run the nvidia-xconfigutility to automatically update your x configuration so that the NVIDIA x driver will be used when you restart x? Any pre-existing x confile will be backed up.`
-选择`Yes`继续
+选择`No`继续
 
 8. 挂载Nvidia驱动
 ```
