@@ -86,7 +86,7 @@ sudo nano /etc/fstab
 ```
 加入如下表项：
 ```bash
-/dev/sdb1 /data ext4 defaults 0 0
+/dev/sdb1 /data ext4 defaults 0 2
 ```
 
 如果是新硬盘，若上述挂载失败，则需格式化（**一定要注意不能有数据！否则会清空！**）：
