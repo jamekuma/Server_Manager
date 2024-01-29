@@ -105,8 +105,8 @@ cuda  cuda-11    cuda-9.0   games  lib      man     share  TensorRT-7.2.2.3
 
 可以通过修改用户自身的~/.bashrc文件，加入以下内容，改变当前用户使用的cuda版本（以cuda 11.1为例）：
 ```bash
-export PATH=/usr/local/cuda-11.1/bin${PATH:+:${PATH}}
-export LD_LIBRARY_PATH=/usr/local/cuda-11.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export PATH=/usr/local/cuda-11.1/bin:${PATH}
+export LD_LIBRARY_PATH=/usr/local/cuda-11.1/lib64:${LD_LIBRARY_PATH}
 export CUDA_HOME=/usr/local/cuda-11.1
 ```
 
